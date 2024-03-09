@@ -1,9 +1,9 @@
 from aiogram.types import Message, CallbackQuery
 from aiogram import F
 from aiogram.fsm.context import FSMContext
-from bot.base_func import router, Go, get_forms
-from bot.keyboards.base_kb import go_back
-from bot.bot_settings import settings
+from base_func import router, Go, get_forms
+from keyboards.base_kb import go_back
+from bot_settings import settings
 
 
 @router.callback_query(F.data == "stop")
