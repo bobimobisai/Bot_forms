@@ -1,6 +1,6 @@
 from openai import AsyncOpenAI
 from aiogram.fsm.state import State, StatesGroup
-from bot_settings import settings
+from bot.bot_settings import settings
 from aiogram import Router
 from aiogram.fsm.context import FSMContext
 

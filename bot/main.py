@@ -5,9 +5,9 @@ from aiogram.fsm.storage.memory import MemoryStorage
 
 
 import asyncio
-from bot_settings import settings
+from bot.bot_settings import settings
 import logging
-from src.commands import router
+from bot.src.commands import router
 
 
 async def main():
