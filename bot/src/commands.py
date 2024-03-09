@@ -1,7 +1,7 @@
 from aiogram.types import Message, FSInputFile
 from aiogram.filters import CommandStart, Command, StateFilter
 from keyboards.base_kb import menu
-from bot.src.handler import router, Go
+from src.handler import router, Go
 from aiogram.fsm.context import FSMContext
 
 
