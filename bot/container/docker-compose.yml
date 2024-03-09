@@ -1,5 +1,0 @@
-version: "3.5"
-
-services:
-  bot:
-    build: /home/user1/Bot_forms/bot/container/bot
