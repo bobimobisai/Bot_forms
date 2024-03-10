@@ -14,12 +14,12 @@ class Item(BaseModel):
     description: str
 
 
-@app.post("/items/")
+@app.post("/items")
 async def create_item(item: Item):
     print(f"Received item: {item}")
     return {"message": "Item received"}
 
 
-@app.get("/", response_class=HTMLResponse)
+@app.get("/app", response_class=HTMLResponse)
 async def read_item(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})

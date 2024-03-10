@@ -2,16 +2,22 @@ version: "3.5"
 
 services:
   bot: 
-    build: .
+    build:
+      context: .
     container_name: bot
-    command: python bot/main.py
+    command: python main.py
     volumes:
-      - ./:/app
+      - ./bot:/
+    ports:
+      - "8000:8000" 
 
 
   form: 
-    build: .
-    container_name: form
-    command: gunicorn -w 4 -b 0.0.0.0:8000 app_form.main:app
+    build:  
+      context: .
+    container_name: app
+    command: gunicorn -w 4 -b 0.0.0.0:8080 app_form.main:app 
     volumes:
-      - ./:/form
+      - ./app:/
+    ports:
+      - "8080:8080"
