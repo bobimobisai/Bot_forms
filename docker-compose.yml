@@ -14,4 +14,4 @@ services:
     container_name: form
     command: uvicorn app_form.main:app --reload
     volumes:
-      - ./:/form
+      - ./:/app
