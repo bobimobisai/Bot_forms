@@ -12,6 +12,6 @@ services:
   form: 
     build: .
     container_name: form
-    command: uvicorn app_form.main:app --reload
+    command: uvicorn app_form.main:app --reload --host 10.0.0.5
     volumes:
       - ./:/app
