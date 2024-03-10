@@ -1,7 +1,9 @@
 FROM python:3.10
 
 WORKDIR /app
+COPY . .
 
+WORKDIR /form
 COPY . .
 
 RUN pip3 install --upgrade setuptools

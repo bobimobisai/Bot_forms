@@ -8,9 +8,10 @@ services:
     volumes:
       - ./:/app
 
+
   form: 
     build: .
     container_name: form
     command: uvicorn app_form.main:app --reload
     volumes:
-      - ./:/app
+      - ./:/form
